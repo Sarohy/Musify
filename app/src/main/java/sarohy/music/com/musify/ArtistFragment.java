@@ -52,11 +52,11 @@ public class ArtistFragment extends Fragment implements android.support.v4.app.L
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_artist, container, false);
-        recyclerViewAlbums=v.findViewById(R.id.recycler_view_album);
+        recyclerViewAlbums= (RecyclerView) v.findViewById(R.id.recycler_view_album);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerViewAlbums.setLayoutManager(mLayoutManager);
         recyclerViewAlbums.setItemAnimator(new DefaultItemAnimator());
-        recyclerViewSongs=v.findViewById(R.id.recycler_view_songs);
+        recyclerViewSongs= (RecyclerView) v.findViewById(R.id.recycler_view_songs);
         mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerViewSongs.setLayoutManager(mLayoutManager);
         recyclerViewSongs.setItemAnimator(new DefaultItemAnimator());
@@ -250,7 +250,7 @@ public class ArtistFragment extends Fragment implements android.support.v4.app.L
 
             public MyViewHolder(View view) {
                 super(view);
-                ivImage=view.findViewById(R.id.img_albumart);
+                ivImage= (ImageView) view.findViewById(R.id.img_albumart);
                 ivImage.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 ivImage
                         .setLayoutParams(new LinearLayout.LayoutParams(270, 270));

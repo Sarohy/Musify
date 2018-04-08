@@ -58,7 +58,7 @@ public class SongsFragment extends Fragment  implements android.support.v4.app.L
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_songs, container, false);
-        recyclerViewSongs=v.findViewById(R.id.recycler_view_songs);
+        recyclerViewSongs= (RecyclerView) v.findViewById(R.id.recycler_view_songs);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerViewSongs.setLayoutManager(mLayoutManager);
         recyclerViewSongs.setItemAnimator(new DefaultItemAnimator());
@@ -133,7 +133,7 @@ public class SongsFragment extends Fragment  implements android.support.v4.app.L
 
             public MyViewHolder(View view) {
                 super(view);
-                ivImage = view.findViewById(R.id.img_albumart);
+                ivImage = (ImageView) view.findViewById(R.id.img_albumart);
                 ivImage.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 ivImage
                         .setLayoutParams(new LinearLayout.LayoutParams(270, 270));
